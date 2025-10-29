@@ -1,0 +1,31 @@
+from abc import ABCMeta, abstractmethod
+from typing import Any
+
+import numpy as np
+
+from .dataset import AlphaDataset
+from .datasets.utils.utility import Segment
+
+
+class AlphaModel(metaclass=ABCMeta):
+    """Template class for machine learning algorithms"""
+
+    @abstractmethod
+    def fit(self, dataset: AlphaDataset) -> None:
+        """
+        Fit the model with dataset
+        """
+        pass
+
+    @abstractmethod
+    def predict(self, dataset: AlphaDataset, segment: Segment) -> np.ndarray:
+        """
+        Make predictions using the model
+        """
+        pass
+
+    def detail(self) -> Any:
+        """
+        Output detailed information about the model
+        """
+        return
