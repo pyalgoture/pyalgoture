@@ -345,7 +345,7 @@ SqliteDatabase = LazySqliteDatabase
 # from pyalgoture.utils.plotter import Plotter
 # from pyalgoture.utils.preprocessor import CointAnalysis, KalmanFilter, GaussianHMM, PCA, FirstValueScaler, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler, Normalizer, ADF
 
-__version__ = "0.5.1"
+__version__ = "0.5.2"
 
 
 ### pdoc ignore modules/functions/classes
