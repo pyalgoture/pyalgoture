@@ -28,15 +28,38 @@ jobs:
       
       - name: Verify version consistency
         run: |
-          PYPROJECT_VERSION=$(python -c "import re; content = open('pyproject.toml').read(); match = re.search(r'version = [\"\x27](.+?)[\"\x27]', content); print(match.group(1) if match else '')")
-          INIT_VERSION=$(python -c "import re; content = open('pyalgoture/__init__.py').read(); match = re.search(r'__version__ = [\"\x27](.+?)[\"\x27]', content); print(match.group(1) if match else '')")
-          if [ "$PYPROJECT_VERSION" != "$INIT_VERSION" ]; then
-            echo "ERROR: Version mismatch!"
-            echo "pyproject.toml version: $PYPROJECT_VERSION"
-            echo "__init__.py version: $INIT_VERSION"
-            exit 1
-          fi
-          echo "✓ Versions match: $PYPROJECT_VERSION"
+          python << EOF
+          import re
+          import sys
+          
+          # Read pyproject.toml
+          with open('pyproject.toml', 'r') as f:
+              pyproject_content = f.read()
+          pyproject_match = re.search(r'version\s*=\s*["\'](.+?)["\']', pyproject_content)
+          pyproject_version = pyproject_match.group(1) if pyproject_match else None
+          
+          # Read __init__.py
+          with open('pyalgoture/__init__.py', 'r') as f:
+              init_content = f.read()
+          init_match = re.search(r'__version__\s*=\s*["\'](.+?)["\']', init_content)
+          init_version = init_match.group(1) if init_match else None
+          
+          if not pyproject_version:
+              print("ERROR: Could not find version in pyproject.toml")
+              sys.exit(1)
+          
+          if not init_version:
+              print("ERROR: Could not find __version__ in pyalgoture/__init__.py")
+              sys.exit(1)
+          
+          if pyproject_version != init_version:
+              print(f"ERROR: Version mismatch!")
+              print(f"pyproject.toml version: {pyproject_version}")
+              print(f"__init__.py version: {init_version}")
+              sys.exit(1)
+          
+          print(f"✓ Versions match: {pyproject_version}")
+          EOF
       
       - name: Build package
         run: python -m build
@@ -48,5 +71,11 @@ jobs:
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: twine upload dist/*
+        run: |
+          if [ -z "$TWINE_PASSWORD" ]; then
+            echo "ERROR: PYPI_API_TOKEN secret is not set!"
+            echo "Please add PYPI_API_TOKEN to your GitHub repository secrets."
+            exit 1
+          fi
+          twine upload dist/*
 
