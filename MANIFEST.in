@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+recursive-include pyalgoture *.py
+recursive-include pyalgoture *.txt
+recursive-include pyalgoture *.json
+

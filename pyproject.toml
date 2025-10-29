@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyalgoture"
+version = "0.1.0"
+description = "A comprehensive algorithmic trading platform for cryptocurrency and stock markets with backtesting and real-time trading capabilities"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "algoture", email = "contact@algoture.com"}
+]
+maintainers = [
+    {name = "algoture", email = "contact@algoture.com"}
+]
+keywords = [
+    "trading",
+    "backtesting",
+    "cryptocurrency",
+    "algorithmic-trading",
+    "quantitative-trading",
+    "trading-strategy",
+    "finance"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "polars>=0.19.0",
+    "torch>=2.0.0",
+    "lightgbm>=4.0.0",
+    "scikit-learn>=1.3.0",
+    "pandas-ta>=0.3.14b0",
+    "TA-Lib>=0.4.28",
+    "duckdb>=0.9.0",
+    "peewee>=3.17.0",
+    "pymysql>=1.1.0",
+    "requests>=2.31.0",
+    "websocket-client>=1.6.0",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "orjson>=3.9.0",
+    "python-multipart>=0.0.6",
+    "redis>=5.0.0",
+    "langchain>=0.1.0",
+    "langchain-core>=0.1.0",
+    "langchain-openai>=0.0.5",
+    "langchain-deepseek>=0.0.3",
+    "matplotlib>=3.7.0",
+    "bokeh>=3.2.0",
+    "python-dateutil>=2.8.0",
+    "pytz>=2023.3",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pyalgoture"
+Documentation = "https://github.com/yourusername/pyalgoture#readme"
+Repository = "https://github.com/yourusername/pyalgoture"
+Issues = "https://github.com/yourusername/pyalgoture/issues"
+
+[tool.setuptools]
+packages = ["pyalgoture"]
+
+[tool.setuptools.package-data]
+pyalgoture = ["**/*.py", "**/*.txt", "**/*.json"]
+
