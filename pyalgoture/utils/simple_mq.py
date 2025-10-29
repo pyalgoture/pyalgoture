@@ -42,7 +42,7 @@ class SignalMQ:
     pub/sub messaging capabilities using Redis as the backend.
     """
 
-    REDIS_KEY_PREFIX = "AREIXIO_SIGNAL_MQ"
+    REDIS_KEY_PREFIX = "PYALGOTURE_SIGNAL_MQ"
     RANDOM_NAME_LENGTH = 16
 
     def __init__(

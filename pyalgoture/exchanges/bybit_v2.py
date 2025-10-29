@@ -200,9 +200,9 @@ class BybitClient(RestClient):
 
     def _post(self, path: str, params: dict[str, Any] | None = None) -> Any:
         if self.session:
-            response = self.add_request(method="POST", path=path, data=params, headers={"Referer": "AREIX"})
+            response = self.add_request(method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"})
         else:
-            response = self.request(method="POST", path=path, data=params, headers={"Referer": "AREIX"})
+            response = self.request(method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"})
         if self.debug:
             print(f"[POST]({path}) - params:{params} | response: {response.text}({response.status_code})")
         return self._process_response(response)
@@ -730,7 +730,7 @@ class BybitClient(RestClient):
             "qty": quantity,
             "orderLinkId": order_id if order_id else self.new_order_id(),
             "timeInForce": time_in_force,
-            "agentSource": "AREIX",  # 0.35%
+            "agentSource": "PYALGOTURE",  # 0.35%
             "category": self.DATA_TYPE,
         }
         if is_margin_trading:

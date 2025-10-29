@@ -24,7 +24,7 @@ def prec_round(value: float, target: int) -> float:
 
 UTC_TZ = pytz.utc
 
-SECRET_KEY = "areix-ai"
+SECRET_KEY = "pyalgoture"
 IS_JUPYTER_NOTEBOOK = "JPY_PARENT_PID" in os.environ
 
 

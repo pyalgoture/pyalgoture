@@ -319,9 +319,9 @@
 #         return self._process_response(response)
 
 #     def _post(self, path: str, params: Optional[dict[str, Any]] = None) -> Any:
-#         # response = self.request(method="POST", path=path, data=params, headers={'Referer': 'AREIX'})
+#         # response = self.request(method="POST", path=path, data=params, headers={'Referer': 'PYALGOTURE'})
 #         response = self.query(
-#             method="POST", path=path, data=params, headers={"Referer": "AREIX"}
+#             method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"}
 #         )
 #         return self._process_response(response)
 
@@ -763,7 +763,7 @@
 #             "rate_limit": 100
 #         }
 #         {'ret_code': 0, 'ret_msg': 'OK', 'ext_code': '', 'ext_info': '', 'result': [{'api_key': 'f98ehmeoqqKW5qctkP', 'type': 'personal', 'user_id': 6949322, 'inviter_id': 6721911, 'ips': ['*'], 'note': 'OLA_01', 'permissions': ['Order', 'Position', 'SpotTrade', 'OptionsTrade'], 'created_at': '2022-04-27T03:45:27Z', 'expired_at': '2022-07-27T03:45:27Z', 'read_only': False, 'vip_level': 'No VIP', 'mkt_maker_level': '0'}], 'time_now': '1657525794.219057', 'rate_limit_status': 599, 'rate_limit_reset_ms': 1657525794201, 'rate_limit': 600}
-#         {'ret_code': 0, 'ret_msg': 'OK', 'ext_code': '', 'ext_info': '', 'result': [{'api_key': 'KKqaq9on9fBtZ1yuUV', 'type': 'AREIX', 'user_id': 6949322, 'inviter_id': 6721911, 'ips': ['18.167.29.57', '18.163.87.75', '16.163.152.219', '16.162.73.178'], 'note': 'AREIX', 'permissions': ['SpotTrade', 'OptionsTrade', 'DerivativesTrade', 'Position', 'Order'], 'created_at': '2022-07-10T09:04:13Z', 'expired_at': '', 'read_only': False, 'vip_level': 'No VIP', 'mkt_maker_level': '0'}], 'time_now': '1657525874.431047', 'rate_limit_status': 599, 'rate_limit_reset_ms': 1657525874414, 'rate_limit': 600}
+#         {'ret_code': 0, 'ret_msg': 'OK', 'ext_code': '', 'ext_info': '', 'result': [{'api_key': 'KKqaq9on9fBtZ1yuUV', 'type': 'PYALGOTURE', 'user_id': 6949322, 'inviter_id': 6721911, 'ips': ['18.167.29.57', '18.163.87.75', '16.163.152.219', '16.162.73.178'], 'note': 'PYALGOTURE', 'permissions': ['SpotTrade', 'OptionsTrade', 'DerivativesTrade', 'Position', 'Order'], 'created_at': '2022-07-10T09:04:13Z', 'expired_at': '', 'read_only': False, 'vip_level': 'No VIP', 'mkt_maker_level': '0'}], 'time_now': '1657525874.431047', 'rate_limit_status': 599, 'rate_limit_reset_ms': 1657525874414, 'rate_limit': 600}
 
 #         """
 #         api_info = self._get("/v2/private/account/api-key")
@@ -884,7 +884,7 @@
 #             # 'type': order_type,   # LIMIT_MAKER, LIMIT, MARKET
 #             "orderLinkId": self.new_order_id(),
 #             "timeInForce": "GTC",
-#             "agentSource": "AREIX",  # 0.35%
+#             "agentSource": "PYALGOTURE",  # 0.35%
 #         }
 #         if not order_type:
 #             if not price:

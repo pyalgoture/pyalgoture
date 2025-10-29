@@ -52,7 +52,7 @@
 
 #     """
 
-#     parser = argparse.ArgumentParser(description="Areix IO qucik start")
+#     parser = argparse.ArgumentParser(description="PyAlgoture quick start")
 #     parser.add_argument(
 #         "--version", action="store_true", default=False, help="check current version"
 #     )

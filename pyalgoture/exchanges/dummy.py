@@ -108,13 +108,13 @@ class DummyClient(RestClient):
 
     def _post(self, path: str, params: dict[str, Any] | None = None) -> Any:
         if self.session:
-            response = self.add_request(method="POST", path=path, data=params, headers={"Referer": "AREIX"})
+            response = self.add_request(method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"})
         else:
             response = self.query(
                 method="POST",
                 path=path,
                 data=params,
-                headers={"Referer": "AREIX"},
+                headers={"Referer": "PYALGOTURE"},
                 timeout=(30, 60),
             )
         logger.trace(f"[POST]({path}) - params:{params} | response: {response.text}({response.status_code})")

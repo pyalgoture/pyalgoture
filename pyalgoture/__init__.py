@@ -30,7 +30,7 @@ There is a `context` \ `ctx` object that store all the shared variables and comm
 The platform is highly configurable
 
 ## Flowchart
-![xkcd.com/1570](https://areix.s3.ap-east-1.amazonaws.com/misc/aio_flowchart.png)
+![xkcd.com/1570](https://xkcd.com/1570/)
 
 ## Installation
 
@@ -40,7 +40,7 @@ virtualenv venv --python=python3
 ```
 Activate the virtual environment
 ```python
-# Macbook / Linus
+# Macbook / Linux
 source venv/bin/activate
 
 # Windows
@@ -50,9 +50,9 @@ Deactivate
 ```
 deactivate
 ```
-Install AreixIO package
+Install PyAlgoture package
 ```
-pip install areixio
+pip install pyalgoture
 ```
 
 
@@ -494,7 +494,7 @@ __pdoc__ = {
 #     --commission_rate
 #     --min_commission
 #     """
-#     # print("areixio: Hello, world!!")
+#     # print("pyalgoture: Hello, world!!")
 #     balance = float(balance)
 #     if base_path:
 #         base_path = create_report_folder(base_path)
@@ -627,7 +627,7 @@ __pdoc__ = {
 #         9. standardized_expected_value > 1
 
 #     Args:
-#         user_code (str): unique user code for areix user
+#         user_code (str): unique user code for pyalgoture user
 #         strategy_path (str): strategy file path
 #         codes (list): exchange symbols to conduct backtesting
 #         **kwargs (dict): custom parameter specified for strategy
@@ -641,7 +641,7 @@ __pdoc__ = {
 #     if not os.path.exists(strategy_path):
 #         print(f"{strategy_path} is not existed.")
 #         return
-#     tmp_path = os.path.join(r"/tmp", "areixio_tmp")
+#     tmp_path = os.path.join(r"/tmp", "pyalgoture_tmp")
 
 #     print("backtest is conducting, this may take some time...")
 #     # TODO: download data concurrently
@@ -724,7 +724,7 @@ __pdoc__ = {
 
 #         files = {"file": open(strategy_path, "rb")}
 #         res = requests.post(
-#             "https://api-dev.areix-ai.com/file",
-#             params={"bucket": "areix", "folder": f"strategies/{user_code}"},
+#             "https://api-dev.pyalgoture.com/file",
+#             params={"bucket": "pyalgoture", "folder": f"strategies/{user_code}"},
 #             files=files,
 #         )

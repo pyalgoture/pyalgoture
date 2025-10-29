@@ -128,8 +128,7 @@ HTML_TEMPLATE = """
                         text-align: center;
                         <!--  transform: rotate(-45deg);  -->
                         user-select: none;">
-                        <img width="20" height="20" src="https://areix-ai.com/wp-content/uploads/2019/09/Asset-1-1-e1590331845541.png" alt="">
-                        <p>2025 @ Charon</p>
+                        <p>2025 @ PyAlgoture</p>
                     </div>
             </div>
         </div>

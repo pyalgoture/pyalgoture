@@ -252,9 +252,9 @@
 #         return self._process_response(response)
 
 #     def _post(self, path: str, params: Optional[dict[str, Any]] = None) -> Any:
-#         # response = self.request(method="POST", path=path, data=params, headers={'Referer': 'AREIX'})
+#         # response = self.request(method="POST", path=path, data=params, headers={'Referer': 'PYALGOTURE'})
 #         response = self.query(
-#             method="POST", path=path, data=params, headers={"Referer": "AREIX"}
+#             method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"}
 #         )
 #         return self._process_response(response)
 

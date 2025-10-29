@@ -239,9 +239,9 @@ class BitgetClient(RestClient):
 
     def _post(self, path: str, params: dict[str, Any] | None = None) -> Any:
         if self.session:
-            response = self.add_request(method="POST", path=path, data=params, headers={"Referer": "AREIX"})
+            response = self.add_request(method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"})
         else:
-            response = self.query(method="POST", path=path, data=params, headers={"Referer": "AREIX"})
+            response = self.query(method="POST", path=path, data=params, headers={"Referer": "PYALGOTURE"})
         return self._process_response(response)
 
     def _delete(self, path: str, params: dict[str, Any] | None = None) -> Any:
