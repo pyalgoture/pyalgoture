@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyalgoture"
-version = "0.5.1"
+version = "0.5.2"
 description = "A comprehensive algorithmic trading platform for cryptocurrency and stock markets with backtesting and real-time trading capabilities"
 readme = "README.md"
 requires-python = ">=3.8"
